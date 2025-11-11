@@ -1,6 +1,6 @@
 // FUNDAMENTOS DE PROGRAMACIÃ“N - PRÃCTICA
-// Nombre del estudiante: _________________
-// Fecha: _________________
+// Nombre del estudiante: Dylan Vazquez Soriano
+// Fecha: //11/11/2025
 
 // ============================================
 // SECCIÃ“N 1: VARIABLES Y TIPOS DE DATOS (10 puntos)
@@ -15,15 +15,15 @@ function miInformacion() {
   // TODO: Declara las variables nombre, edad y carrera
   // Ejemplo: const nombre = "Juan";
   
-  const nombre = "";
-  const edad = 0;
-  const carrera = "";
+  const nombre = "Dylan Vazquez Soriano";
+  const edad = 18;
+  const carrera = "Desarrollo de Software y Negocios Digitales";
   
   return { nombre, edad, carrera };
 }
 
 /**
- * Ejercicio 1.2: Operaciones aritmÃ©ticas bÃ¡sicas (3 puntos)
+ * Ejercicio 1.2:Operaciones aritmÃ©ticas bÃ¡sicas (3 puntos)
  * @param {number} a - Primer nÃºmero
  * @param {number} b - Segundo nÃºmero
  * @returns {Object} - Objeto con suma, resta, multiplicaciÃ³n y divisiÃ³n
@@ -31,23 +31,24 @@ function miInformacion() {
 function operacionesBasicas(a, b) {
   // TODO: Calcula suma, resta, multiplicaciÃ³n y divisiÃ³n de a y b
   
-  const suma = 0;
-  const resta = 0;
-  const multiplicacion = 0;
-  const division = 0;
+  const suma = a+b;
+  const resta = a-b;
+  const multiplicacion = a*b;
+  const division = a/b;
   
   return { suma, resta, multiplicacion, division };
 }
 
 /**
- * Ejercicio 1.3: Ãrea de un rectÃ¡ngulo (2 puntos)
+ * Ejercicio 1.3: Ãrea de un rectÃ¡ngulo (2 puntos) 
  * @param {number} base - Base del rectÃ¡ngulo
  * @param {number} altura - Altura del rectÃ¡ngulo
  * @returns {number} - Ãrea del rectÃ¡ngulo
  */
 function areaRectangulo(base, altura) {
   // TODO: Calcula y retorna el Ã¡rea (base * altura)
-  return 0;
+  area = base * altura;
+  return area;
 }
 
 /**
@@ -59,7 +60,7 @@ function areaRectangulo(base, altura) {
  */
 function celsiusAFahrenheit(celsius) {
   // TODO: Implementa la conversiÃ³n
-  return 0;
+  return celsius * 9/5 + 32;
 }
 
 // ============================================
@@ -74,7 +75,12 @@ function celsiusAFahrenheit(celsius) {
 function parOImpar(numero) {
   // TODO: Usa el operador % (mÃ³dulo) para determinar si es par o impar
   // Pista: Un nÃºmero es par si numero % 2 === 0
-  return "";
+  numero % 2 === 0
+  if (numero % 2 === 0) {
+    return "par";
+  } else {
+    return "impar";
+  }
 }
 
 /**
@@ -84,11 +90,15 @@ function parOImpar(numero) {
  */
 function evaluarNota(nota) {
   // TODO: Implementa la lÃ³gica con if/else
-  return "";
+    if (nota >= 60) {
+      return "Aprobado";
+    } else {
+      return "Reprobado"
+    }
 }
 
 /**
- * Ejercicio 2.3: El mayor de tres nÃºmeros (4 puntos)
+ * Ejercicio 2.3: El mayor de tres nÃºmeros (4 puntos) 
  * @param {number} a - Primer nÃºmero
  * @param {number} b - Segundo nÃºmero
  * @param {number} c - Tercer nÃºmero
@@ -96,17 +106,29 @@ function evaluarNota(nota) {
  */
 function mayorDeTres(a, b, c) {
   // TODO: Encuentra y retorna el mayor de los tres nÃºmeros
-  return 0;
+  if (a >= b && a >= c) {
+    return a;
+  } else if (b >= a && b >= c) {
+    return b;
+  } else {
+    return c;
+  }
 }
 
 /**
- * Ejercicio 2.4: ClasificaciÃ³n de edad (4 puntos)
+ * Ejercicio 2.4: ClasificaciÃ³n de edad (4 puntos) 
  * @param {number} edad - Edad de la persona
  * @returns {string} - "menor" (0-17), "adulto" (18-64), "mayor" (65+)
  */
 function clasificarEdad(edad) {
   // TODO: Implementa la clasificaciÃ³n con if/else if/else
-  return "";
+    if (edad >= 0 && edad <= 17) {
+      return "menor";
+    } else if (edad >= 18 && edad <= 64) {
+      return "adulto";
+    } else if (edad >= 65) {
+      return "mayor";
+    }
 }
 
 // ============================================
@@ -122,21 +144,31 @@ function clasificarEdad(edad) {
  */
 function factorial(n) {
   // TODO: Implementa usando un bucle for
-  return 1;
+  let resultado = 1;
+  for (let i = 1; i <=n;i++){
+    resultado *= i;
+  }
+   return resultado;
 }
 
 /**
- * Ejercicio 3.2: Suma de nÃºmeros del 1 al n (4 puntos)
+ * Ejercicio 3.2: Suma de nÃºmeros del 1 al n (4 puntos) 
  * @param {number} n - NÃºmero lÃ­mite
  * @returns {number} - Suma de 1 + 2 + 3 + ... + n
  */
 function sumaHastaN(n) {
   // TODO: Usa un bucle para sumar todos los nÃºmeros desde 1 hasta n
-  return 0;
+  let suma = 0;
+  let contador = 1;
+  while (contador <= n) {
+    suma += contador;
+    contador++;
+  }
+  return suma;
 }
 
 /**
- * Ejercicio 3.3: Tabla de multiplicar (5 puntos)
+ * Ejercicio 3.3: Tabla de multiplicar (5 puntos) 
  * @param {number} numero - NÃºmero para generar su tabla
  * @returns {Array} - Array con los resultados de numero x 1 hasta numero x 10
  * Ejemplo: tablaMultiplicar(3) debe retornar [3, 6, 9, 12, 15, 18, 21, 24, 27, 30]
@@ -144,11 +176,14 @@ function sumaHastaN(n) {
 function tablaMultiplicar(numero) {
   // TODO: Genera un array con la tabla de multiplicar
   const tabla = [];
+  for (let i = 1; i <= 10; i++) {
+    tabla.push(numero * i);
+  }
   return tabla;
 }
 
 /**
- * Ejercicio 3.4: NÃºmeros pares hasta n (6 puntos)
+ * Ejercicio 3.4: NÃºmeros pares hasta n (6 puntos) 
  * @param {number} n - NÃºmero lÃ­mite
  * @returns {Array} - Array con todos los nÃºmeros pares desde 2 hasta n
  * Ejemplo: numerosPares(10) debe retornar [2, 4, 6, 8, 10]
@@ -156,6 +191,11 @@ function tablaMultiplicar(numero) {
 function numerosPares(n) {
   // TODO: Crea un array con todos los nÃºmeros pares hasta n
   const pares = [];
+  for (let i = 2; i <= n; i += 2) {
+    if (i % 2 === 0){
+    pares.push(i);
+  }
+}
   return pares;
 }
 
@@ -170,32 +210,45 @@ function numerosPares(n) {
  */
 function sumaArray(numeros) {
   // TODO: Suma todos los elementos del array
-  return 0;
+  let suma = 0;
+  for (let i = 0; i < numeros.length; i++) {
+    suma += numeros[i];
+  }
+  return suma;
 }
 
 /**
- * Ejercicio 4.2: Promedio de un array (5 puntos)
+ * Ejercicio 4.2: Promedio de un array (5 puntos) 
  * @param {Array<number>} numeros - Array de nÃºmeros
  * @returns {number} - Promedio de los nÃºmeros
  */
 function promedioArray(numeros) {
   // TODO: Calcula el promedio (suma total / cantidad de elementos)
-  return 0;
+  if (numeros.length === 0) {
+    return 0; // Evitar divisiÃ³n por cero
+  }
+  return sumaArray(numeros) / numeros.length;
 }
 
 /**
- * Ejercicio 4.3: Encontrar el mÃ¡ximo (6 puntos)
+ * Ejercicio 4.3: Encontrar el mÃ¡ximo (6 puntos) 
  * @param {Array<number>} numeros - Array de nÃºmeros
  * @returns {number} - El nÃºmero mÃ¡s grande del array
  */
 function encontrarMaximo(numeros) {
   // TODO: Encuentra y retorna el nÃºmero mÃ¡s grande
   // Pista: Puedes usar Math.max(...numeros) o hacerlo con un bucle
-  return 0;
+  let max = numeros[0];
+  for (let i = 1; i < numeros.length; i++) {
+    if (numeros[i] > max) {
+      max = numeros[i];
+    }
+  }
+  return max;
 }
 
 /**
- * Ejercicio 4.4: Filtrar nÃºmeros mayores a un valor (5 puntos)
+ * Ejercicio 4.4: Filtrar nÃºmeros mayores a un valor (5 puntos) 
  * @param {Array<number>} numeros - Array de nÃºmeros
  * @param {number} limite - Valor lÃ­mite
  * @returns {Array<number>} - Nuevo array solo con nÃºmeros mayores al lÃ­mite
@@ -204,11 +257,16 @@ function encontrarMaximo(numeros) {
 function filtrarMayores(numeros, limite) {
   // TODO: Crea un nuevo array con solo los nÃºmeros mayores al lÃ­mite
   const mayores = [];
+  for (let i = 0; i < numeros.length; i++) {
+    if (numeros[i] > limite) {
+      mayores.push(numeros[i]);
+    }
+  }
   return mayores;
 }
 
 /**
- * Ejercicio 4.5: Invertir un array (5 puntos)
+ * Ejercicio 4.5: Invertir un array (5 puntos) 
  * @param {Array} arr - Array a invertir
  * @returns {Array} - Nuevo array con los elementos en orden inverso
  * Ejemplo: invertirArray([1, 2, 3, 4]) debe retornar [4, 3, 2, 1]
@@ -217,6 +275,9 @@ function invertirArray(arr) {
   // TODO: Invierte el orden de los elementos
   // Pista: Puedes usar arr.reverse() o hacerlo manualmente
   const invertido = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    invertido.push(arr[i]);
+  }
   return invertido;
 }
 
@@ -236,11 +297,18 @@ function invertirArray(arr) {
 function crearMatriz(filas, columnas) {
   // TODO: Crea una matriz de filas x columnas llena de ceros
   const matriz = [];
+  for (let i = 0; i < filas; i++) {
+    const fila = [];
+    for (let j = 0; j < columnas; j++) {
+      fila.push(0);
+    }
+    matriz.push(fila);
+    }
   return matriz;
 }
 
 /**
- * Ejercicio 5.2: Suma de elementos de una matriz (6 puntos)
+ * Ejercicio 5.2: Suma de elementos de una matriz (6 puntos) 
  * @param {Array<Array<number>>} matriz - Matriz de nÃºmeros
  * @returns {number} - Suma de todos los elementos
  * Ejemplo: sumaMatriz([[1, 2], [3, 4]]) debe retornar 10
@@ -248,11 +316,17 @@ function crearMatriz(filas, columnas) {
 function sumaMatriz(matriz) {
   // TODO: Suma todos los elementos de la matriz
   // NecesitarÃ¡s dos bucles: uno para las filas y otro para las columnas
-  return 0;
+  let total = 0;
+  for (let i = 0; i < matriz.length; i++) {
+    for (let j = 0; j < matriz[i].length; j++) {
+      total += matriz[i][j];
+    }
+  }
+  return total;
 }
 
 /**
- * Ejercicio 5.3: Obtener una fila (5 puntos)
+ * Ejercicio 5.3: Obtener una fila (5 puntos) 
  * @param {Array<Array<number>>} matriz - Matriz
  * @param {number} indiceFila - Ãndice de la fila (empezando en 0)
  * @returns {Array<number>} - La fila especificada
@@ -260,11 +334,12 @@ function sumaMatriz(matriz) {
  */
 function obtenerFila(matriz, indiceFila) {
   // TODO: Retorna la fila indicada
-  return [];
-}
+    return matriz[indiceFila];
+  }
+
 
 /**
- * Ejercicio 5.4: Obtener una columna (7 puntos)
+ * Ejercicio 5.4: Obtener una columna (7 puntos) 
  * @param {Array<Array<number>>} matriz - Matriz
  * @param {number} indiceColumna - Ãndice de la columna (empezando en 0)
  * @returns {Array<number>} - Array con los elementos de la columna
@@ -273,11 +348,14 @@ function obtenerFila(matriz, indiceFila) {
 function obtenerColumna(matriz, indiceColumna) {
   // TODO: Extrae todos los elementos de la columna indicada
   const columna = [];
+  for (let i = 0; i < matriz.length; i++) {
+    columna.push(matriz[i][indiceColumna]);
+  }
   return columna;
 }
 
 /**
- * Ejercicio 5.5: Transponer una matriz (6 puntos)
+ * Ejercicio 5.5: Transponer una matriz (6 puntos) 
  * La transpuesta intercambia filas por columnas
  * @param {Array<Array<number>>} matriz - Matriz original
  * @returns {Array<Array<number>>} - Matriz transpuesta
@@ -286,6 +364,13 @@ function obtenerColumna(matriz, indiceColumna) {
 function transponer(matriz) {
   // TODO: Crea la matriz transpuesta
   const transpuesta = [];
+  for (let i = 0; i < matriz[0].length; i++) {
+    const Fila = [];
+    for (let j = 0; j < matriz.length; j++) {
+      Fila.push(matriz[j][i]);
+    }
+    transpuesta.push(Fila);
+  }
   return transpuesta;
 }
 
