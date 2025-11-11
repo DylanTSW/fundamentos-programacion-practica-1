@@ -75,12 +75,12 @@ function celsiusAFahrenheit(celsius) {
 function parOImpar(numero) {
   // TODO: Usa el operador % (mÃ³dulo) para determinar si es par o impar
   // Pista: Un nÃºmero es par si numero % 2 === 0
-  numero % 2 === 0
-  if (numero % 2 === 0) {
-    return "par";
-  } else {
-    return "impar";
-  }
+  numero % 2 === 0 
+  if (numero % 2 === 0) { 
+    return "par"; 
+  } else { 
+    return "impar"; 
+  } 
 }
 
 /**
