@@ -106,13 +106,13 @@ function evaluarNota(nota) {
  */
 function mayorDeTres(a, b, c) {
   // TODO: Encuentra y retorna el mayor de los tres nÃºmeros
-  if (a >= b && a >= c) {
-    return a;
-  } else if (b >= a && b >= c) {
-    return b;
-  } else {
-    return c;
-  }
+  if (a >= b && a >= c) { 
+    return a; 
+  } else if (b >= a && b >= c) { 
+    return b; 
+  } else { 
+    return c; 
+  } 
 }
 
 /**
