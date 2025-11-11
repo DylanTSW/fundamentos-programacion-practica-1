@@ -48,7 +48,7 @@ function operacionesBasicas(a, b) {
 function areaRectangulo(base, altura) {
   // TODO: Calcula y retorna el Ã¡rea (base * altura)
   area = base * altura; 
-  return area;
+  return area; 
 }
 
 /**
@@ -60,7 +60,7 @@ function areaRectangulo(base, altura) {
  */
 function celsiusAFahrenheit(celsius) {
   // TODO: Implementa la conversiÃ³n
-  return celsius * 9/5 + 32;
+  return celsius * 9/5 + 32; 
 }
 
 // ============================================
