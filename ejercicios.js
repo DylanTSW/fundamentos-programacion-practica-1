@@ -316,13 +316,13 @@ function crearMatriz(filas, columnas) {
 function sumaMatriz(matriz) {
   // TODO: Suma todos los elementos de la matriz
   // NecesitarÃ¡s dos bucles: uno para las filas y otro para las columnas
-  let total = 0;
-  for (let i = 0; i < matriz.length; i++) {
-    for (let j = 0; j < matriz[i].length; j++) {
-      total += matriz[i][j];
-    }
-  }
-  return total;
+  let total = 0; 
+  for (let i = 0; i < matriz.length; i++) { 
+    for (let j = 0; j < matriz[i].length; j++) { 
+      total += matriz[i][j]; 
+    } 
+  } 
+  return total; 
 }
 
 /**
