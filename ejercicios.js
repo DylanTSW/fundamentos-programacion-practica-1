@@ -158,13 +158,13 @@ function factorial(n) {
  */
 function sumaHastaN(n) {
   // TODO: Usa un bucle para sumar todos los nÃºmeros desde 1 hasta n
-  let suma = 0;
-  let contador = 1;
-  while (contador <= n) {
-    suma += contador;
-    contador++;
-  }
-  return suma;
+  let suma = 0; 
+  let contador = 1; 
+  while (contador <= n) { 
+    suma += contador; 
+    contador++; 
+  } 
+  return suma; 
 }
 
 /**
