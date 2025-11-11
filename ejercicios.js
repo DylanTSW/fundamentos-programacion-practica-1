@@ -224,10 +224,10 @@ function sumaArray(numeros) {
  */
 function promedioArray(numeros) {
   // TODO: Calcula el promedio (suma total / cantidad de elementos)
-  if (numeros.length === 0) {
-    return 0; // Evitar divisiÃ³n por cero
-  }
-  return sumaArray(numeros) / numeros.length;
+  if (numeros.length === 0) { 
+    return 0; // Evitar divisiÃ³n por cero 
+  } 
+  return sumaArray(numeros) / numeros.length; 
 }
 
 /**
